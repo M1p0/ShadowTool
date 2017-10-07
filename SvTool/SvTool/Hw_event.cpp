@@ -13,7 +13,7 @@ T MAX(T num1, T num2)
     return num1 > num2 ? num1 : num2;
 }
 
-void SetMouse(POINT pos)
+void SetMouse(POINT pos) 
 {
     SetCursorPos(pos.x, pos.y);
 }
