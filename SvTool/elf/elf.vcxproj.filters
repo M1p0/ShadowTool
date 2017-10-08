@@ -15,21 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test.cpp">
+    <ClCompile Include="elf.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Hw_event.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="lvlup.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Hw_event.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="lvlup.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

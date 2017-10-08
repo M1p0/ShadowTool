@@ -46,9 +46,7 @@ void RightUp()
 
 void LeftClick()
 {
-    mouse_event(MOUSEEVENTF_LEFTDOWN , 0, 0, 0, 0);
-    Sleep(100);
-    mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+    mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
 }
 
 void RightClick()
@@ -148,12 +146,5 @@ void Drag(int sx, int sy, int ex, int ey, int Speed)
     SetMouse(start);
     LeftDown();
     Mouse_MoveTo(start, end, Speed);
-    LeftUp();
-}
-
-void DelayClick()
-{
-    LeftDown();
-    Sleep(1000);
     LeftUp();
 }

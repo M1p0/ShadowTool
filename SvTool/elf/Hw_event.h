@@ -13,4 +13,4 @@ void SetDelay(int time);
 void Mouse_MoveTo(POINT start, POINT end,int Speed=10);
 void Drag(POINT start, POINT end,int Speed=10); 
 void Drag(int sx, int sy, int ex, int ey, int Speed = 10);
-void DelayClick();
+void elf_err();
