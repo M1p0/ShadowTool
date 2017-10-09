@@ -2,10 +2,13 @@
 #include <iostream>
 #include "Hw_event.h"
 #include <process.h>
-
+#include "utils.h"
 using namespace std;
 
 //extern HANDLE STARTELF;
+
+
+
 
 void elf()
 {
@@ -18,6 +21,9 @@ void elf()
     SwitchToThisWindow(wnd, true);//activate window
     SetWindowPos(wnd, HWND_TOPMOST, 0, 0, 0, 0, SWP_NOSIZE);//move SV to (0,0)
 
+    HANDLE LockWindow;
+    LockWindow = (HANDLE)_beginthreadex(NULL, 0, &Lock, NULL, 0, NULL);
+
     SetMouse(130, 690);  //home
     LeftClick();
     Sleep(3000);
@@ -29,9 +35,7 @@ void elf()
     SetMouse(300, 690);  //solo
     LeftClick();
     Sleep(3000);
-    SetMouse(300, 690);
-    LeftClick();
-    Sleep(3000);
+
 
 
 
@@ -49,6 +53,7 @@ void elf()
 
     SetMouse(920, 500); //Select Stage
     Sleep(2000);
+Loop:
     Drag(920, 500, 1056, 30);
     Drag(920, 500, 1056, 30);
     Drag(920, 500, 1056, 30);
@@ -107,7 +112,13 @@ void elf()
     SetMouse(985, 697);//maximum deck
     LeftClick();
     Sleep(5000);
-    system("d:\\elf.exe");
+    //system("elf.exe");
+    
+    Drag(814, 691, 816, 300,300);
+    Sleep(5000);
+    SetMouse(1174, 385);
+    LeftClick();//end turn
+
     //third turn
 
     Sleep(12000); //enemy turn
@@ -124,9 +135,8 @@ void elf()
     SetMouse(985, 697);//maximum deck
     LeftClick();
     Sleep(1500);
-    system("d:\\elf.exe");  //drag elf2
-
-    Sleep(3000);
+    Drag(814, 691, 816, 300, 300);//elf2
+    Sleep(5000);
     SetMouse(649, 548);//OK
     LeftClick();
 
@@ -144,7 +154,8 @@ void elf()
     SetMouse(436, 436); //Select
     LeftClick();
     Sleep(500);
-    SetMouse(252, 415); //Evolve
+    SetMouse(252, 358); //Evolve
+    Sleep(500);
     LeftClick();
     Sleep(1000);
     SetMouse(650, 550);
@@ -156,13 +167,22 @@ void elf()
     Sleep(2000);
 
     Drag(575, 440, 650, 111);
-    Sleep(10000);//finish
+    Sleep(14000);//finish
 
 
     SetMouse(645, 547);
     LeftClick();//Ok
 
+    Sleep(6000);//skip
+    SetMouse(1200, 75);
+    LeftClick();
 
+    Sleep(2500);//confirm
+    SetMouse(800, 555);
+    LeftClick();
+
+    Sleep(7000);//loading
+    goto Loop;
     return;
 
 }
