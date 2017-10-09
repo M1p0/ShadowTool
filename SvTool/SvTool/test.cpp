@@ -22,12 +22,16 @@ int main()
     cout << endl;
     cout << endl;
     cout << "请选择职业" << endl;
+    cout << "0.鼠标坐标" << endl;
     cout << "1.Elf" << endl;
     cin >> select;
     if (select == 1)
     {
         elf();
-        cout << "程序将在10s内开始运行" << endl;
+    }
+    if (select == 0)
+    {
+        MousePos();
     }
 
 

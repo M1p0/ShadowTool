@@ -153,9 +153,9 @@ Loop:
     Sleep(1000);
     SetMouse(436, 436); //Select
     LeftClick();
-    Sleep(500);
+    Sleep(1000);
     SetMouse(252, 358); //Evolve
-    Sleep(500);
+    Sleep(1000);
     LeftClick();
     Sleep(1000);
     SetMouse(650, 550);

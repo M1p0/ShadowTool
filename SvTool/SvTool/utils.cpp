@@ -13,7 +13,7 @@ LRESULT CALLBACK HookCallback(int code, WPARAM wParam, LPARAM lParam)
 
     if (ks->vkCode == 27)
     {
-        system("taskkill /IM SvTool.exe");
+        system("taskkill /IM SvTool.exe /F");
         return 1;
     }
     return CallNextHookEx(0, code, wParam, lParam);
@@ -51,11 +51,24 @@ unsigned __stdcall Lock(void *pArgument)
         HWND wnd = FindWindow(NULL, "Shadowverse");
         SwitchToThisWindow(wnd, true);//activate window
         SetWindowPos(wnd, HWND_TOPMOST, 0, 0, 0, 0, SWP_NOSIZE);//move SV to (0,0)
-        Sleep(100);
+        Sleep(10);
     }
 
 
     _endthreadex(0);
     return 0;
 
+}
+
+
+void MousePos()
+{
+    while (1)
+    {
+        POINT pos;
+        GetCursorPos(&pos);
+        cout << pos.x << "," << pos.y << endl;
+        Sleep(100);
+        system("cls");
+    }
 }
