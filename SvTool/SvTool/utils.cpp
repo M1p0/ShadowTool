@@ -5,6 +5,8 @@
 #include <process.h>
 #include "utils.h"
 using namespace std;
+extern int counter;
+
 
 HHOOK keyboardHook = 0;
 LRESULT CALLBACK HookCallback(int code, WPARAM wParam, LPARAM lParam)
@@ -13,6 +15,7 @@ LRESULT CALLBACK HookCallback(int code, WPARAM wParam, LPARAM lParam)
 
     if (ks->vkCode == 27)
     {
+        cout << "Program executed " << counter << " times" << endl;
         system("taskkill /IM SvTool.exe /F");
         return 1;
     }
@@ -71,4 +74,15 @@ void MousePos()
         Sleep(100);
         system("cls");
     }
+}
+
+
+
+Resolution GetResolution()
+{
+    Resolution res;
+    res.Width = GetSystemMetrics(SM_CXSCREEN);
+    res.Height = GetSystemMetrics(SM_CYSCREEN);
+    return res;
+
 }
