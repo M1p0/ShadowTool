@@ -11,9 +11,7 @@ double Proportion;
 int main()
 {
 
-    Resolution res = GetResolution();
-    Proportion = res.Width / 1920.0;
-    cout << "Proportion:" << Proportion << endl;
+
     int select;
     HANDLE STOP;
     STOP = (HANDLE)_beginthreadex(NULL, 0, &Stop, NULL, 0, NULL);
@@ -24,6 +22,9 @@ int main()
     cout << endl;
     cout << endl;
     cout << endl;
+    cout << "--------------------------------------------------" << endl;
+    cout << "注意!!游戏一定要设置为美版中文 文字会影响坐标" << endl;
+    cout << "--------------------------------------------------" << endl;
 Reselect:
     cout << "请选择职业(输入序号)" << endl;
     cout << "0.鼠标坐标" << endl;

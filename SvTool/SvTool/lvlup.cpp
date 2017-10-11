@@ -95,7 +95,7 @@ Loop:
     LeftClick();// end turn
 
     //second turn
-    Sleep(15000);
+    Sleep(18000);
     SetMouse(648, 663);
     LeftClick(); //OK
     Sleep(2500);
@@ -118,11 +118,11 @@ Loop:
 
     //third turn
 
-    Sleep(12000); //enemy turn
+    Sleep(14000); //enemy turn&wait for OK
 
     SetMouse(645, 659);
     LeftClick();//OK
-    Sleep(2000);
+    Sleep(3000);
     Drag(668, 692, 652, 328); //Sylvan Justice
     Sleep(2000);
     SetMouse(649, 262);
@@ -134,7 +134,7 @@ Loop:
     LeftClick();
     Sleep(1500);
     Drag(814, 691, 816, 300, 300);//elf2
-    Sleep(5000);
+    Sleep(7000);
     SetMouse(649, 548);//OK
     LeftClick();
 
@@ -142,8 +142,7 @@ Loop:
     Drag(738, 684, 696, 319);
     Sleep(2500);
     SetMouse(649, 262);
-    LeftClick();
-    //DelayClick();//Select enemy
+    LeftClick();//Select enemy
     Sleep(5000);
 
     SetMouse(650, 550);//OK;
@@ -159,7 +158,7 @@ Loop:
     Sleep(1000);
     SetMouse(650, 550);
     LeftClick(); //confirm
-    Sleep(5000);//envolving
+    Sleep(6000);//envolving
 
     //attack
     Drag(432, 435, 650, 111);
@@ -287,18 +286,18 @@ Royal_Loop:
     Sleep(9000);
     SetMouse(650, 666);
     LeftClick(); //OK
-    Sleep(1500);
-    SetMouse(985, 697);//maximum deck
+    Sleep(2500);
+    SetMouse(990, 701);//maximum deck
     LeftClick();
     Sleep(1000);
-    Drag(817, 681, 841, 295);
+    Drag(749, 693, 761, 395);
     Sleep(5000);
     SetMouse(650, 548);
     LeftClick();//OK
     Sleep(1500);
     Drag(577, 436, 656, 96);//Attack
 
-    Sleep(13000);
+    Sleep(15000);
     SetMouse(647, 552);
     LeftClick();//OK
 
