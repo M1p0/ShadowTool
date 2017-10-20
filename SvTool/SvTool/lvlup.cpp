@@ -7,7 +7,8 @@ using namespace std;
 extern double Proportion;
 extern int counter;
 
-void elf()
+
+void initial()
 {
     HWND wnd = FindWindow(NULL, "Shadowverse");
     if (wnd == 0)
@@ -20,6 +21,13 @@ void elf()
 
     HANDLE LockWindow;
     LockWindow = (HANDLE)_beginthreadex(NULL, 0, &Lock, NULL, 0, NULL);
+}
+
+
+
+void elf()
+{
+    initial();
 
     SetMouse(130, 690);  //home
     LeftClick();
@@ -188,17 +196,7 @@ Loop:
 
 void Royal()
 {
-    HWND wnd = FindWindow(NULL, "Shadowverse");
-    if (wnd == 0)
-    {
-        cout << "Çë´ò¿ªSV" << endl;
-        return;
-    }
-    SwitchToThisWindow(wnd, true);//activate window
-    SetWindowPos(wnd, HWND_TOPMOST, 0, 0, 0, 0, SWP_NOSIZE);//move SV to (0,0)
-
-    HANDLE LockWindow;
-    LockWindow = (HANDLE)_beginthreadex(NULL, 0, &Lock, NULL, 0, NULL);
+    initial();
 
     SetMouse(130, 690);  //home
     LeftClick();
@@ -315,8 +313,181 @@ Royal_Loop:
     goto Royal_Loop;
     return;
 
+}
 
 
 
+
+void Witch()
+{
+   
+    initial();
+    SetMouse(130, 690);  //home
+    LeftClick();
+    Sleep(3000);
+    SetMouse(130, 690);
+    LeftClick();
+    Sleep(3000);
+
+
+    SetMouse(300, 690);  //solo
+    LeftClick();
+    Sleep(3000);
+
+
+
+
+    SetMouse(400, 400);  //Main Story
+    LeftClick();
+    Sleep(5000);
+
+    SetMouse(419, 526);  //Select Witch
+    LeftClick();
+    Sleep(1000);
+    SetMouse(1190, 530);  //OK
+    LeftClick();
+    Sleep(3000);
+
+
+    SetMouse(920, 500); //Select Stage
+    Sleep(2000);
+Witch_Loop:
+    Drag(920, 500, 1056, 30);
+    Drag(920, 500, 1056, 30);
+    Drag(920, 500, 1056, 30);
+    Drag(920, 500, 1056, 30);
+    Sleep(1000);
+    SetMouse(910, 510);//chapter 1
+    LeftClick();
+    Sleep(4000);
+    SetMouse(800, 660);
+    LeftClick();    //OK
+    Sleep(5000);
+
+    SetMouse(620, 380);  //Skip
+    LeftClick();
+    Sleep(1500);
+    SetMouse(620, 380);
+    LeftClick();
+    Sleep(1500);
+    SetMouse(620, 380);
+    LeftClick();
+    Sleep(4500);
+
+    SetMouse(1200, 80); //Skip
+    LeftClick();
+    Sleep(1500);
+
+    SetMouse(800, 550);
+    LeftClick();
+    Sleep(18000); //wait for battle
+
+    SetMouse(650, 664);
+    Sleep(1000);
+    LeftClick();
+    Sleep(2000);
+
+    SetMouse(985, 697);//maximum deck
+    LeftClick();
+
+
+    Drag(644, 687, 647, 333); //2 hit 1
+    Sleep(1500);
+
+    SetMouse(651, 96);//select enemy
+    LeftClick();
+    Sleep(3000);
+
+
+    SetMouse(642, 662);//OK
+
+
+    Sleep(3000);
+    SetMouse(642, 662);//OK
+    LeftClick();
+    Sleep(1500);
+    SetMouse(985, 697);//maximum deck
+    LeftClick();
+
+    Sleep(2000);
+    Drag(803, 687, 747, 317);  //card stone
+
+    Sleep(3500);
+    SetMouse(650, 545);//OK
+    LeftClick();
+    Sleep(1000);
+
+    SetMouse(1171, 392);//end turn 
+    LeftClick();
+
+    //enemy turn
+    Sleep(12000);
+
+    //second turn
+    SetMouse(646, 544);
+    Sleep(1000);
+    LeftClick();//OK
+
+
+    Sleep(2500);
+    Drag(646, 690, 641, 261, 100);
+    Sleep(1000);
+    SetMouse(641, 261); //Select enemy;
+    Sleep(1500);
+    LeftClick();
+    Sleep(3500);
+
+    SetMouse(644, 660);
+    LeftClick();//OK
+
+    Sleep(2000);
+    SetMouse(985, 697);//maximum deck
+    LeftClick();
+    Sleep(2500);
+
+    Drag(737, 676, 647, 333); //533
+    Sleep(1500);
+    SetMouse(641, 261); //Select enemy;
+    LeftClick();
+    Sleep(4500);
+
+    SetMouse(648, 549);//OK
+    LeftClick();
+    Sleep(2500);
+
+
+    SetMouse(571, 422);  //select stone
+    LeftClick();
+    Sleep(1500);
+
+    SetMouse(245, 359);
+    LeftClick();
+    Sleep(1500);//envolve
+
+    SetMouse(646, 547);//confirm
+    LeftClick();
+
+    Sleep(6000);//envolving
+
+    Drag(580, 434, 643, 101);//attack
+    Sleep(13000);//ending
+
+    SetMouse(650, 550);//OK
+    LeftClick();
+    Sleep(3000); //loading
+
+
+    Sleep(3000);//skip
+    SetMouse(1200, 75);
+    LeftClick();
+
+    Sleep(2500);//confirm
+    SetMouse(800, 555);
+    LeftClick();
+
+    Sleep(7000);//loading
+    counter++;
+    goto Witch_Loop;
+    return;
 }
 

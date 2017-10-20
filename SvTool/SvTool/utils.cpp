@@ -56,8 +56,6 @@ unsigned __stdcall Lock(void *pArgument)
         SetWindowPos(wnd, HWND_TOPMOST, 0, 0, 0, 0, SWP_NOSIZE);//move SV to (0,0)
         Sleep(10);
     }
-
-
     _endthreadex(0);
     return 0;
 

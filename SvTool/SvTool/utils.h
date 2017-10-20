@@ -2,8 +2,8 @@
 
 struct Resolution
 {
-    double Width;
-    double Height;
+    double Width=0;
+    double Height=0;
 };
 
 unsigned __stdcall Lock(void *pArgument);

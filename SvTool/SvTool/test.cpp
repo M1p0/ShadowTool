@@ -15,9 +15,9 @@ int main()
     int select;
     HANDLE STOP;
     STOP = (HANDLE)_beginthreadex(NULL, 0, &Stop, NULL, 0, NULL);
-    cout << "M1p0太菜了 本科技只能在屏幕分辨率1920*1080下使用" << endl;
-    cout << "请确保SV已将分辨率设置为窗口化1280*720" << endl;
-    cout << "并且游戏画面在主页面" << endl;
+    cout << "M1p0太菜了 本科技只能在屏幕分辨率1920*1080下使用(划掉)" << endl;
+    cout << "请确保已将SV分辨率设置为窗口化1280*720" << endl;
+    cout << "并且游戏画面在主页面(能看见金币的界面)" << endl;
     cout << "游戏内按ESC可退出程序" << endl;
     cout << endl;
     cout << endl;
@@ -41,6 +41,10 @@ Reselect:
         break;
     case 2:
         Royal();
+        break;
+    case 3:
+        Witch();
+        break;
     default:
         cout << "请输入正确的序号" << endl;
         goto Reselect;
