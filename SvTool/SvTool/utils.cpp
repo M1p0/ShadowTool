@@ -74,6 +74,11 @@ void MousePos()
     }
 }
 
+void Monitor_Off()
+{
+    SendMessage(FindWindow(0, 0), WM_SYSCOMMAND, SC_MONITORPOWER, 2);
+}
+
 
 
 Resolution GetResolution()

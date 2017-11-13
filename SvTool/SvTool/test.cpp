@@ -30,6 +30,7 @@ Reselect:
     cout << "0.ЪѓБъзјБъ" << endl;
     cout << "1.Elf" << endl;
     cout << "2.Royal" << endl;
+    cout << "3.Witch" << endl;
     cin >> select;
     switch (select)
     {
